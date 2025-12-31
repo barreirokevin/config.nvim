@@ -761,14 +761,26 @@ require('lazy').setup({
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     -- 'ellisonleao/gruvbox.nvim',
-    'folke/tokyonight.nvim',
+    -- 'folke/tokyonight.nvim',
+    'neanias/everforest-nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
+      -- Configure the theme first.
+      require('everforest').setup {
+        background = 'hard', -- Options: "soft", "medium", "hard"
+        italics = false,
+        disable_italic_comments = false,
+        transparent_background_level = 1,
+        sign_column_background = 'none',
+        ui_contrast = 'low',
+        diagnostic_virtual_text = 'coloured',
+        -- Add any other options you want
+      }
+
       -- Load the colorscheme here.
-      -- Like many other themes, this one has different styles, and you could load
-      -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       -- vim.cmd.colorscheme 'gruvbox'
-      vim.cmd.colorscheme 'tokyonight-night'
+      -- vim.cmd.colorscheme 'tokyonight-night'
+      vim.cmd.colorscheme 'everforest'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
