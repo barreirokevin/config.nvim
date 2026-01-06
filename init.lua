@@ -827,6 +827,7 @@ require('lazy').setup({
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
+
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
@@ -851,6 +852,14 @@ require('lazy').setup({
     --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+  },
+
+  { -- Preview markdown, HTML, LaTeX, Typst, and YAML files
+    'OXY2DEV/markview.nvim',
+    lazy = false,
+
+    -- Completion for `blink.cmp`
+    -- dependencies = { "saghen/blink.cmp" },
   },
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
