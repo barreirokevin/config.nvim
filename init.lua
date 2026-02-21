@@ -776,6 +776,17 @@ require('lazy').setup({
       --   diagnostic_virtual_text = 'coloured',
       --   -- Add any other options you want
       -- }
+      require('tokyonight').setup {
+        style = 'night',
+        transparent = true,
+        styles = {
+          sidebars = 'transparent',
+          floats = 'transparent',
+        },
+        on_colors = function(colors) end,
+        on_highlights = function(highlights, colors) end,
+        -- Add any other options you want
+      }
 
       -- Load the colorscheme here.
       -- vim.cmd.colorscheme 'gruvbox'
